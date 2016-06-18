@@ -229,8 +229,13 @@
 
 			
 			for(var ctr = a.length - 1; ctr>=0; ctr--){
-				var myString =" <div class='nd2-card' style='padding: 5px 5px 5px 5px'  >" + a[ctr].message + a[ctr].id+ "<div class='card-action align-right'><a href='#' onclick='delNotif("+a[ctr].id+")' class='ui-btn ui-btn-inline ui-btn-fab align-right'><i class='zmdi zmdi-delete'></i></div></div>";	
-	
+			//	var myString =" <div class='nd2-card' style='padding: 5px 5px 5px 5px'  >" + a[ctr].message + a[ctr].id+ </div>";	
+
+				var myString ="<div class='nd2-card' style='padding: 5px 5px 5px 5px;'>&nbsp;";
+				myString+="<strong>PAGASA Alert " +a[ctr].mdate+" " + a[ctr].mtime + ": </strong><br>	"; 
+				myString+= "<p style='padding: 5px 5px 5px 5px; text-indent: 30px'>" + a[ctr].message + "</p>";
+				myString+= "<div class='card-action align-right'><a href='#' onclick='delNotif("+a[ctr].id+")' class='ui-btn ui-btn-inline ui-btn-fab align-right'><i class='zmdi zmdi-delete'></i></div>";
+				myString+= "</div>";
 				
 				$('.myMessage').append(myString);
 			}
