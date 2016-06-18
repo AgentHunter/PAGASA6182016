@@ -39,24 +39,16 @@ function registerPushwooshAndroid() {
 			var d = new Date();
 			var n = d.getMilliseconds();
 			var testObject;
-			var myArr={'id': n, 'message': title, 'mdate': '', 'mtime': ''};
-	;
+			var myArr={'id': '9999', 'message': 'Dummy Data', 'mdate': '01/01/2015', 'mtime':'12:00'};
+			var myArr=[];
 			var t=[];
 			var retrieveObject; 
-			// localStorage.setItem('testObject', JSON.stringify('testObject'));
-
-			// var retrieveObject = localStorage.getItem('testObject');
-			// console.log('retrieveObject: ', JSON.parse(retrieveObject));
-			console.log(localStorage.getItem('testObject'));
-			if(!localStorage.getItem('testObject')===null){
-				retrieveObject = localStorage.getItem('testObject');
-				t=localStorage.getItem('testObject',JSON.parse(retrieveObject));
-				console.log(t);
-				n=t.length;
-			} else {
-				localStorage.setItem('testObject',  JSON.stringify(myArr));
+		
+			if(localStorage.getItem('testObject') == null || localStorage.getItem('testObject') == ""){
+				localStorage.setItem('testObject', JSON.stringify(fasdfa));
 			}
-			myArr = localStorage.getItem('testObject');
+			
+			myArr = JSON.parse(localStorage.getItem('testObject'));
 			testObject = {'id': n, 'message': title, 'mdate': d.getMonth()+"/"+d.getDay()+"/"+d.getFullYear(), 'mtime': d.getHours() + ":" + ((d.getMinutes()<10)? "0" + d.getMinutes(): d.getMinutes())};
 			myArr.push(testObject);
 			localStorage.setItem('testObject', JSON.stringify(myArr));
