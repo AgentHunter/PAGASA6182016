@@ -52,7 +52,7 @@ function registerPushwooshAndroid() {
 			testObject = {'id': n, 'message': title, 'mdate': d.getMonth()+"/"+d.getDay()+"/"+d.getFullYear(), 'mtime': d.getHours() + ":" + ((d.getMinutes()<10)? "0" + d.getMinutes(): d.getMinutes())};
 			myArr.push(testObject);
 			localStorage.setItem('testObject', JSON.stringify(myArr));
-
+			location.href("history.html");
 			//stopping geopushes
 			//pushNotification.stopGeoPushes();
 		}
