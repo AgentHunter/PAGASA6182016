@@ -45,7 +45,7 @@ function registerPushwooshAndroid() {
 			var retrieveObject; 
 		
 			if(localStorage.getItem('testObject') == null || localStorage.getItem('testObject') == ""){
-				localStorage.setItem('testObject', JSON.stringify(fasdfa));
+				localStorage.setItem('testObject', JSON.stringify(myArr));
 			}
 			
 			myArr = JSON.parse(localStorage.getItem('testObject'));
